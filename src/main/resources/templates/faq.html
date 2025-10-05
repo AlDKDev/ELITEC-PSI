@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - NEXUS Gaming</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <i class="bi bi-controller"></i> NEXUS Gaming
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/catalogue">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<div class="bg-dark text-white py-4">
+    <div class="container">
+        <h1><i class="bi bi-question-circle"></i> Preguntas Frecuentes</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="/" class="text-white">Inicio</a></li>
+                <li class="breadcrumb-item active text-white-50">FAQ</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="container my-5">
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+            <div class="accordion" id="faqAccordion">
+
+                <!-- Pregunta 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq1">
+                            <i class="bi bi-question-circle me-2"></i>
+                            ¿Qué es NEXUS Gaming?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show"
+                         data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            NEXUS Gaming es un sistema de gestión de inventarios
+                            especializado en tiendas de videojuegos. Permite controlar
+                            stock, precios, categorías y generar reportes en tiempo real.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq2">
+                            <i class="bi bi-question-circle me-2"></i>
+                            ¿Qué tecnologías utiliza?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse"
+                         data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            El sistema está construido con:
+                            <ul>
+                                <li><strong>Backend:</strong> Java 21, Spring Boot 3.2</li>
+                                <li><strong>Frontend:</strong> Thymeleaf, Bootstrap 5</li>
+                                <li><strong>Base de Datos:</strong> MySQL 8.0</li>
+                                <li><strong>Seguridad:</strong> Spring Security 6</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq3">
+                            <i class="bi bi-question-circle me-2"></i>
+                            ¿Necesito conocimientos técnicos?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse"
+                         data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No. La interfaz está diseñada para ser intuitiva y
+                            fácil de usar. Sin embargo, para el desarrollo o
+                            personalización, se requieren conocimientos de:
+                            <ul>
+                                <li>Java y POO</li>
+                                <li>HTML, CSS, Bootstrap</li>
+                                <li>SQL y MySQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq4">
+                            <i class="bi bi-question-circle me-2"></i>
+                            ¿Puedo gestionar múltiples plataformas?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse"
+                         data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí. El sistema soporta todas las plataformas principales:
+                            PlayStation, Xbox, Nintendo Switch, PC y más. Además,
+                            puedes categorizar por género, año, desarrolladora, etc.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq5">
+                            <i class="bi bi-question-circle me-2"></i>
+                            ¿El sistema genera reportes?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse"
+                         data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí. Puedes generar reportes en formato Excel y PDF con:
+                            <ul>
+                                <li>Inventario completo</li>
+                                <li>Productos con bajo stock</li>
+                                <li>Ventas por categoría</li>
+                                <li>Estadísticas personalizadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq6">
+                            <i class="bi bi-question-circle me-2"></i>
+                            ¿Es seguro?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse"
+                         data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Absolutamente. Implementa Spring Security 6 con:
+                            <ul>
+                                <li>Autenticación y autorización</li>
+                                <li>Encriptación de contraseñas (BCrypt)</li>
+                                <li>Control de acceso basado en roles</li>
+                                <li>Protección contra CSRF y XSS</li>
+                                <li>Auditoría de operaciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="alert alert-primary mt-5" role="alert">
+                <h5 class="alert-heading">
+                    <i class="bi bi-info-circle-fill"></i> ¿Más preguntas?
+                </h5>
+                <p class="mb-0">
+                    No dudes en <a href="/contact" class="alert-link">contactarnos</a>.
+                    Estamos aquí para ayudarte.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">
+            &copy; 2025 NEXUS Gaming. Todos los derechos reservados.
+        </p>
+        <p class="small text-muted mb-0">
+            Sistema de Inventario de Videojuegos v1.0
+        </p>
+    </div>
+</footer>
+
+<!-- Bootstrap 5.3 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

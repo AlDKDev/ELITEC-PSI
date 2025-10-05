@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - NEXUS Gaming</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <i class="bi bi-controller"></i> NEXUS Gaming
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/catalogue">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<div class="bg-dark text-white py-4">
+    <div class="container">
+        <h1><i class="bi bi-envelope"></i> Contáctanos</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="/" class="text-white">Inicio</a></li>
+                <li class="breadcrumb-item active text-white-50">Contacto</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="container my-5">
+
+    <div class="row">
+
+        <!-- Formulario -->
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="bi bi-chat-dots"></i> Envíanos un Mensaje
+                    </h4>
+                </div>
+                <div class="card-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">
+                                Nombre Completo <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="nombre"
+                                   placeholder="Ej: Juan Pérez" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                Email <span class="text-danger">*</span>
+                            </label>
+                            <input type="email" class="form-control" id="email"
+                                   placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">
+                                Teléfono
+                            </label>
+                            <input type="tel" class="form-control" id="telefono"
+                                   placeholder="+51 999 999 999">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">
+                                Asunto <span class="text-danger">*</span>
+                            </label>
+                            <select class="form-select" id="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="soporte">Soporte Técnico</option>
+                                <option value="ventas">Información de Ventas</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">
+                                Mensaje <span class="text-danger">*</span>
+                            </label>
+                            <textarea class="form-control" id="mensaje" rows="5"
+                                      placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox"
+                                   id="aceptoTerminos" required>
+                            <label class="form-check-label" for="aceptoTerminos">
+                                Acepto los términos y condiciones
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="bi bi-send"></i> Enviar Mensaje
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Información de Contacto -->
+        <div class="col-lg-4">
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-info-circle"></i> Información
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p>
+                        <i class="bi bi-geo-alt-fill text-danger"></i>
+                        <strong>Dirección:</strong><br>
+                        Av. Tecnología 123<br>
+                        Lima, Perú
+                    </p>
+                    <hr>
+                    <p>
+                        <i class="bi bi-telephone-fill text-primary"></i>
+                        <strong>Teléfono:</strong><br>
+                        +51 999 888 777
+                    </p>
+                    <hr>
+                    <p>
+                        <i class="bi bi-envelope-fill text-warning"></i>
+                        <strong>Email:</strong><br>
+                        contacto@nexusgaming.com
+                    </p>
+                    <hr>
+                    <p>
+                        <i class="bi bi-clock-fill text-info"></i>
+                        <strong>Horario:</strong><br>
+                        Lun - Vie: 9:00 AM - 6:00 PM<br>
+                        Sáb: 10:00 AM - 2:00 PM
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-share"></i> Redes Sociales
+                    </h5>
+                </div>
+                <div class="card-body text-center">
+                    <a href="#" class="btn btn-primary btn-lg me-2 mb-2">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="btn btn-info btn-lg me-2 mb-2">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="#" class="btn btn-danger btn-lg me-2 mb-2">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="btn btn-success btn-lg mb-2">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">
+            &copy; 2025 NEXUS Gaming. Todos los derechos reservados.
+        </p>
+        <p class="small text-muted mb-0">
+            Sistema de Inventario de Videojuegos v1.0
+        </p>
+    </div>
+</footer>
+
+<!-- Bootstrap 5.3 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
