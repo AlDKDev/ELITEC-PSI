@@ -10,11 +10,12 @@ import lombok.NoArgsConstructor;
 public class Videojuego {
     private Long id;
     private String titulo;
-    private String desarrolladora;
+    private String descripcion;
     private String plataforma;
+    private String genero;
     private Double precio;
     private Integer stock;
-    private String genero;
-    private String portadaUrl;
-    private Boolean destacado;
+    private String desarrolladora;
+    private Integer anioLanzamiento;
+    private String portada;
 }
