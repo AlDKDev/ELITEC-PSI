@@ -78,7 +78,6 @@
 
         <div class="col-md-6 col-lg-4 col-xl-3" th:each="juego : ${videojuegos}">
             <div class="card h-100 shadow-sm">
-
                 <!-- Imagen de portada -->
                 <img th:src="${juego.portada}"
                      class="card-img-top"
@@ -86,11 +85,7 @@
                      style="height: 300px; object-fit: cover;">
 
                 <!-- Header de la card con plataforma -->
-                <div class="card-header"
-                     th:classappend="${juego.plataforma == 'PlayStation 5'} ? 'bg-primary text-white' :
-                                          ${juego.plataforma == 'Xbox Series X'} ? 'bg-success text-white' :
-                                          ${juego.plataforma == 'Nintendo Switch'} ? 'bg-danger text-white' :
-                                          'bg-secondary text-white'">
+                <div class="card-header text-white" th:classappend="${juego.colorPlataforma}" >
                     <i class="bi bi-joystick"></i>
                     <span th:text="${juego.plataforma}">Plataforma</span>
                 </div>
@@ -99,12 +94,10 @@
                 <div class="card-body">
                     <!-- Título del juego -->
                     <h5 class="card-title" th:text="${juego.titulo}">
-                        Título del videojuego
-                    </h5>
+                        Título del videojuego</h5>
 
                     <!-- Descripción -->
-                    <p class="card-text small text-muted"
-                       th:text="${juego.descripcion}">
+                    <p class="card-text small text-muted" th:text="${juego.descripcion}">
                         Descripción del videojuego
                     </p>
 
@@ -120,30 +113,26 @@
                             </span>
                     </div>
 
-                    <!-- Stock con condicional -->
+
                     <p class="mb-2">
                         <i class="bi bi-box"></i>
                         <strong>Stock:</strong>
-                        <span th:text="${juego.stock}">0</span> unidades
+                        <span th:text="${juego.stock}">0</span>unidades
 
-                        <!-- Badge condicional según el stock -->
                         <span th:if="${juego.stock > 15}"
-                              class="badge bg-success ms-2">
-                                Disponible
-                            </span>
-                        <span th:if="${juego.stock >= 5 and juego.stock <= 15}"
-                              class="badge bg-warning ms-2">
-                                Pocas unidades
-                            </span>
-                        <span th:if="${juego.stock < 5}"
-                              class="badge bg-danger ms-2">
-                                Stock bajo
-                            </span>
+                                class="badge bg-success ms-2">Disponible</span>
+
+                        <span th:if="${juego.stock >= 10 and juego.stock <=15}"
+                              class="badge bg-warning ms-2">Pocas Unidades</span>
+
+                        <span th:if="${juego.stock < 10}"
+                              class="badge bg-danger ms-2">Stock bajo</span>
+
                     </p>
 
                     <!-- Precio formateado -->
                     <h4 class="text-success mb-3">
-                        <i class="bi bi-currency-dollar"></i>
+                        <i class="bi "></i>
                         S/ <span th:text="${#numbers.formatDecimal(juego.precio, 1, 2)}">0.00</span>
                     </h4>
 
@@ -153,7 +142,6 @@
                         <span th:text="${juego.desarrolladora}">Desarrolladora</span>
                     </p>
                 </div>
-
                 <!-- Footer de la card -->
                 <div class="card-footer">
                     <button class="btn btn-primary btn-sm w-100">
@@ -162,7 +150,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Mensaje si no hay videojuegos -->

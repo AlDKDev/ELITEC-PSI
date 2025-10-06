@@ -18,4 +18,18 @@ public class Videojuego {
     private String desarrolladora;
     private Integer anioLanzamiento;
     private String portada;
+
+    public String getColorPlataforma(){
+        switch (this.plataforma){
+            case "PlayStation 5":
+                return "bg-primary";
+            case "Xbox Series X":
+                return "bg-success";
+            case "Nintendo Switch":
+                return "bg-danger";
+            default:
+                return "bg-secondary";
+        }
+
+    }
 }

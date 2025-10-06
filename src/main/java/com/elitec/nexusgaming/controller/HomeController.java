@@ -63,7 +63,7 @@ public class HomeController {
                         15,
                         "Nintendo",
                         2023,
-                        "https://via.placeholder.com/300x400?text=Zelda+TOTK"
+                        "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg/250px-The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg"
                 ),
                 new Videojuego(
                         2L,
@@ -75,7 +75,7 @@ public class HomeController {
                         12,
                         "Sony Santa Monica",
                         2022,
-                        "https://via.placeholder.com/300x400?text=God+of+War"
+                        "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png"
                 ),
                 new Videojuego(
                         3L,
@@ -87,7 +87,7 @@ public class HomeController {
                         8,
                         "343 Industries",
                         2021,
-                        "https://via.placeholder.com/300x400?text=Halo+Infinite"
+                        "https://m.media-amazon.com/images/I/614ZKXVkrUL._AC_SL1000_.jpg"
                 ),
                 new Videojuego(
                         4L,
@@ -99,7 +99,7 @@ public class HomeController {
                         20,
                         "FromSoftware",
                         2022,
-                        "https://via.placeholder.com/300x400?text=Elden+Ring"
+                        "https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/aGhopp3MHppi7kooGE2Dtt8C.png"
                 ),
                 new Videojuego(
                         5L,
@@ -111,7 +111,7 @@ public class HomeController {
                         25,
                         "EA Sports",
                         2023,
-                        "https://via.placeholder.com/300x400?text=FIFA+24"
+                        "https://mundosteam.shop/wp-content/uploads/2023/12/Diseno-sin-titulo-2023-11-07T164536.409-1.png"
                 ),
                 new Videojuego(
                         6L,
@@ -123,7 +123,7 @@ public class HomeController {
                         10,
                         "Insomniac Games",
                         2023,
-                        "https://via.placeholder.com/300x400?text=Spider-Man+2"
+                        "https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/2028edeaf4c0b60142550a3d6e024b6009853ceb9f51591e.jpg"
                 ),
                 new Videojuego(
                         7L,
@@ -135,7 +135,7 @@ public class HomeController {
                         18,
                         "Bethesda",
                         2023,
-                        "https://via.placeholder.com/300x400?text=Starfield"
+                        "https://sklepzgrami.pl/wp-content/uploads/2023/12/starfield-main.jpg"
                 ),
                 new Videojuego(
                         8L,
@@ -147,7 +147,7 @@ public class HomeController {
                         22,
                         "Nintendo",
                         2023,
-                        "https://via.placeholder.com/300x400?text=Mario+Wonder"
+                        "https://m.media-amazon.com/images/I/81+nZRC5SBL.jpg"
                 ),
                 new Videojuego(
                         9L,
@@ -159,7 +159,7 @@ public class HomeController {
                         14,
                         "Larian Studios",
                         2023,
-                        "https://via.placeholder.com/300x400?text=Baldurs+Gate+3"
+                        "https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/3098481c9164bb5f33069b37e49fba1a572ea3b89971ee7b.jpg"
                 ),
                 new Videojuego(
                         10L,
@@ -171,7 +171,7 @@ public class HomeController {
                         6,
                         "Remedy Entertainment",
                         2023,
-                        "https://via.placeholder.com/300x400?text=Alan+Wake+2"
+                        "https://image.api.playstation.com/vulcan/ap/rnd/202305/2420/fbd0dcc88b31805fc7d49f59b8e0e5d0276403cde7fb8cc8.jpg"
                 )
         );
     }
