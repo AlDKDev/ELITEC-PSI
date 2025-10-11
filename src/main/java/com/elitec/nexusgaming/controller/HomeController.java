@@ -1,6 +1,6 @@
 package com.elitec.nexusgaming.controller;
 
-import com.elitec.nexusgaming.model.Videojuego;
+import com.elitec.nexusgaming.model.VideojuegoEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,16 +32,16 @@ public class HomeController {
     @GetMapping("/catalogue")
     public String catalogue(Model model) {
         // Crear lista de videojuegos de prueba
-        List<Videojuego> videojuegos = crearVideojuegosPrueba();
+      //  List<VideojuegoEntity> videojuegos = crearVideojuegosPrueba();
 
         // Agregar lista al modelo
-        model.addAttribute("videojuegos", videojuegos);
+      //  model.addAttribute("videojuegos", videojuegos);
 
         // Agregar título de la página
         model.addAttribute("tituloPagina", "Catálogo de Videojuegos");
 
         // Agregar cantidad total
-        model.addAttribute("totalVideojuegos", videojuegos.size());
+      //  model.addAttribute("totalVideojuegos", videojuegos.size());
 
         return "catalogue";
     }
@@ -50,10 +50,10 @@ public class HomeController {
     public String contact(){
         return "contact";
     }
-
-    private List<Videojuego> crearVideojuegosPrueba() {
+/*
+    private List<VideojuegoEntity> crearVideojuegosPrueba() {
         return Arrays.asList(
-                new Videojuego(
+                new VideojuegoEntity(
                         1L,
                         "The Legend of Zelda: Tears of the Kingdom",
                         "La esperada secuela de Breath of the Wild",
@@ -65,7 +65,7 @@ public class HomeController {
                         2023,
                         "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg/250px-The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         2L,
                         "God of War Ragnarök",
                         "Kratos y Atreus en una nueva aventura nórdica",
@@ -77,7 +77,7 @@ public class HomeController {
                         2022,
                         "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         3L,
                         "Halo Infinite",
                         "El regreso del Jefe Maestro",
@@ -89,7 +89,7 @@ public class HomeController {
                         2021,
                         "https://m.media-amazon.com/images/I/614ZKXVkrUL._AC_SL1000_.jpg"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         4L,
                         "Elden Ring",
                         "RPG de mundo abierto de FromSoftware",
@@ -101,7 +101,7 @@ public class HomeController {
                         2022,
                         "https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/aGhopp3MHppi7kooGE2Dtt8C.png"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         5L,
                         "FIFA 24",
                         "La experiencia de fútbol definitiva",
@@ -113,7 +113,7 @@ public class HomeController {
                         2023,
                         "https://mundosteam.shop/wp-content/uploads/2023/12/Diseno-sin-titulo-2023-11-07T164536.409-1.png"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         6L,
                         "Spider-Man 2",
                         "Peter Parker y Miles Morales juntos",
@@ -125,7 +125,7 @@ public class HomeController {
                         2023,
                         "https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/2028edeaf4c0b60142550a3d6e024b6009853ceb9f51591e.jpg"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         7L,
                         "Starfield",
                         "Explora la galaxia en este RPG espacial",
@@ -137,7 +137,7 @@ public class HomeController {
                         2023,
                         "https://sklepzgrami.pl/wp-content/uploads/2023/12/starfield-main.jpg"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         8L,
                         "Super Mario Bros Wonder",
                         "Una nueva aventura 2D de Mario",
@@ -149,7 +149,7 @@ public class HomeController {
                         2023,
                         "https://m.media-amazon.com/images/I/81+nZRC5SBL.jpg"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         9L,
                         "Baldur's Gate 3",
                         "RPG épico basado en D&D",
@@ -161,7 +161,7 @@ public class HomeController {
                         2023,
                         "https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/3098481c9164bb5f33069b37e49fba1a572ea3b89971ee7b.jpg"
                 ),
-                new Videojuego(
+                new VideojuegoEntity(
                         10L,
                         "Alan Wake 2",
                         "Terror psicológico de Remedy",
@@ -172,7 +172,19 @@ public class HomeController {
                         "Remedy Entertainment",
                         2023,
                         "https://image.api.playstation.com/vulcan/ap/rnd/202305/2420/fbd0dcc88b31805fc7d49f59b8e0e5d0276403cde7fb8cc8.jpg"
+                ),
+                new VideojuegoEntity(
+                        11L,
+                        "Starcraft 2",
+                        "Recupera tu reino de los zerg",
+                        "PC",
+                        "Estrategia",
+                        299.99,
+                        4,
+                        "Blizzard Entertainment",
+                        2007,
+                        "https://upload.wikimedia.org/wikipedia/en/2/20/StarCraft_II_-_Box_Art.jpg"
                 )
         );
-    }
+    }*/
 }
