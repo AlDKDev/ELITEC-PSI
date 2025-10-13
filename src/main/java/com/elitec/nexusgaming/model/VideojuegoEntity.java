@@ -2,12 +2,16 @@ package com.elitec.nexusgaming.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name="videojuego")
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class VideojuegoEntity {
@@ -28,7 +32,7 @@ public class VideojuegoEntity {
     @Column(name = "genero", length = 50)
     private String genero;
 
-    @Column(name = "precio", nullable = false, precision = 10, scale = 2)
+    @Column(name = "precio", nullable = false)
     private Double precio;
 
     @Column(name = "stock", nullable = false)
@@ -38,7 +42,7 @@ public class VideojuegoEntity {
     private String desarrolladora;
 
     @Column(name = "fecha_lanzamiento")
-    private Integer fechaLanzamiento;
+    private LocalDate fechaLanzamiento;
 
     @Column(name = "url_caratula", length = 500)
     private String portada;
