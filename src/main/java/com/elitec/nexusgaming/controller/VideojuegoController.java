@@ -107,7 +107,7 @@ public class VideojuegoController {
     /**
      * GET /videojuegos/{id}
      * Muestra los detalles de un videojuego específico
-     *//*
+     */
     @GetMapping("/{id}")
     public String verDetalle(@PathVariable("id") Long id, Model model) {
         Optional<VideojuegoEntity> videojuegoOpt = videojuegoRepository.findById(id);
@@ -128,7 +128,7 @@ public class VideojuegoController {
     /**
      * GET /videojuegos/editar/{id}
      * Muestra el formulario pre-llenado para editar
-     *//*
+     */
     @GetMapping("/editar/{id}")
     public String mostrarFormularioEditar(@PathVariable("id") Long id, Model model) {
         Optional<VideojuegoEntity> videojuegoOpt = videojuegoRepository.findById(id);
@@ -149,7 +149,7 @@ public class VideojuegoController {
     /**
      * POST /videojuegos/actualizar
      * Procesa el formulario de edición y actualiza el videojuego
-     *//*
+     */
     @PostMapping("/actualizar")
     public String actualizarVideojuego(@RequestParam("id") Long id,
                                        @RequestParam("titulo") String titulo,
@@ -159,7 +159,6 @@ public class VideojuegoController {
                                        @RequestParam("precio") Double precio,
                                        @RequestParam("stock") Integer stock,
                                        @RequestParam("genero") String genero,
-                                       @RequestParam("clasificacionEdad") String clasificacionEdad,
                                        @RequestParam(value = "urlCaratula", required = false) String urlCaratula) {
 
         Optional<VideojuegoEntity> videojuegoOpt = videojuegoRepository.findById(id);
@@ -175,8 +174,7 @@ public class VideojuegoController {
             videojuego.setPrecio(precio);
             videojuego.setStock(stock);
             videojuego.setGenero(genero);
-            videojuego.setClasificacionEdad(clasificacionEdad);
-            videojuego.setUrlCaratula(urlCaratula);
+            videojuego.setPortada(urlCaratula);
 
             // Guardar cambios
             videojuegoRepository.save(videojuego);
@@ -192,11 +190,10 @@ public class VideojuegoController {
     /**
      * POST /videojuegos/eliminar/{id}
      * Elimina un videojuego de la base de datos
-     *//*
+     */
     @PostMapping("/eliminar/{id}")
     public String eliminarVideojuego(@PathVariable("id") Long id) {
         videojuegoRepository.deleteById(id);
         return "redirect:/videojuegos";
     }
-*/
 }

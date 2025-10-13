@@ -107,7 +107,6 @@
                     </tr>
                     </thead>
                     <tbody>
-
                     <!-- Mensaje si no hay videojuegos -->
                     <tr th:if="${#lists.isEmpty(videojuegos)}">
                         <td colspan="8" class="text-center text-muted py-4">
@@ -119,8 +118,7 @@
                         </td>
                     </tr>
 
-                    <!-- Iterar videojuegos -->
-
+                    <!-- Iterar videojuegos - SOLO UNA VEZ -->
                     <tr th:each="videojuego : ${videojuegos}">
                         <td th:text="${videojuego.id}">1</td>
                         <td>
@@ -138,75 +136,16 @@
                         <td>
                             <span th:text="${videojuego.stock}">0</span>
                             <span th:if="${videojuego.stockBajo()}" class="badge bg-warning text-dark ms-1">
-                                        <i class="bi bi-exclamation-triangle"></i> Bajo
-                                    </span>
+                <i class="bi bi-exclamation-triangle"></i> Bajo
+            </span>
                         </td>
                         <td>
-                                    <span th:if="${videojuego.activo}" class="badge bg-success">
-                                        <i class="bi bi-check-circle"></i> Activo
-                                    </span>
+            <span th:if="${videojuego.activo}" class="badge bg-success">
+                <i class="bi bi-check-circle"></i> Activo
+            </span>
                             <span th:unless="${videojuego.activo}" class="badge bg-danger">
-                                        <i class="bi bi-x-circle"></i> Inactivo
-                                    </span>
-                        </td>
-
-                        <td>
-                            <div class="btn-group" role="group">
-                                <!-- Ver detalle -->
-                                <a th:href="@{/videojuegos/{id}(id=${videojuego.id})}"
-                                   class="btn btn-sm btn-info"
-                                   title="Ver detalle">
-                                    <i class="bi bi-eye"></i>
-                                </a>
-
-                                <!-- Editar -->
-                                <a th:href="@{/videojuegos/editar/{id}(id=${videojuego.id})}"
-                                   class="btn btn-sm btn-warning"
-                                   title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </a>
-
-                                <!-- Eliminar -->
-                                <form th:action="@{/videojuegos/eliminar/{id}(id=${videojuego.id})}"
-                                      method="post"
-                                      style="display: inline;"
-                                      th:onsubmit="|return confirm('¿Estás seguro de eliminar ${videojuego.titulo}?');|">
-                                    <button type="submit"
-                                            class="btn btn-sm btn-danger"
-                                            title="Eliminar">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </td>
-
-                    </tr><tr th:each="videojuego : ${videojuegos}">
-                        <td th:text="${videojuego.id}">1</td>
-                        <td>
-                            <strong th:text="${videojuego.titulo}">Título</strong>
-                            <br>
-                            <small class="text-muted" th:text="${videojuego.desarrolladora}">Desarrolladora</small>
-                        </td>
-                        <td>
-                            <span class="badge bg-secondary" th:text="${videojuego.plataforma}">PC</span>
-                        </td>
-                        <td th:text="${videojuego.genero}">Género</td>
-                        <td>
-                            <strong>$<span th:text="${#numbers.formatDecimal(videojuego.precio, 1, 2)}">0.00</span></strong>
-                        </td>
-                        <td>
-                            <span th:text="${videojuego.stock}">0</span>
-                            <span th:if="${videojuego.stockBajo()}" class="badge bg-warning text-dark ms-1">
-                                        <i class="bi bi-exclamation-triangle"></i> Bajo
-                                    </span>
-                        </td>
-                        <td>
-                                    <span th:if="${videojuego.activo}" class="badge bg-success">
-                                        <i class="bi bi-check-circle"></i> Activo
-                                    </span>
-                            <span th:unless="${videojuego.activo}" class="badge bg-danger">
-                                        <i class="bi bi-x-circle"></i> Inactivo
-                                    </span>
+                <i class="bi bi-x-circle"></i> Inactivo
+            </span>
                         </td>
                         <td>
                             <div class="btn-group" role="group">
@@ -228,7 +167,7 @@
                                 <form th:action="@{/videojuegos/eliminar/{id}(id=${videojuego.id})}"
                                       method="post"
                                       style="display: inline;"
-                                      th:onsubmit="|return confirm('¿Estás seguro de eliminar ${videojuego.titulo}?');|">
+                                      onsubmit="return confirm('¿Estás seguro de eliminar este videojuego?');">
                                     <button type="submit"
                                             class="btn btn-sm btn-danger"
                                             title="Eliminar">
@@ -238,7 +177,6 @@
                             </div>
                         </td>
                     </tr>
-
                     </tbody>
                 </table>
             </div>
